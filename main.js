@@ -4,12 +4,12 @@ const path = require('path');
 let tray = null;
 
 app.on('ready', () => {
-  console.log('starting');
-  tray = new Tray(path.join(__dirname, 'stopwatch-solid.png'));
-
-  if (process.platform === 'win32') {
-    tray.on('click', () => console.log('hello'));
+  if (app.dock) {
+    app.dock.hide();
   }
+
+  tray = new Tray(getIcon());
+  tray.setToolTip('52-17');
 
   const menu = Menu.buildFromTemplate([
     {
@@ -19,7 +19,13 @@ app.on('ready', () => {
       },
     },
   ]);
-
-  tray.setToolTip('Clipmaster');
   tray.setContextMenu(menu);
+  if (process.platform === 'win32') {
+    tray.on('click', () => tray.popUpContextMenu());
+  }
 });
+
+function getIcon() {
+  // TODO handle dark mode
+  return path.join(__dirname, 'icon-dark.png');
+}
