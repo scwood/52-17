@@ -1,6 +1,6 @@
 # 52-17
 
-A productivity timer for the [52-17 method](https://en.wikipedia.org/wiki/52/17_rule). Works cross platform and lives in the notification tray/bar.
+A productivity timer for the [52/17 method](https://en.wikipedia.org/wiki/52/17_rule). Works cross platform and lives in the notification tray/bar.
 
 ## Screenshots
 
