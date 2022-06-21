@@ -1,16 +1,21 @@
 {
   "name": "52-17",
   "version": "1.0.0",
-  "main": "main.js",
+  "main": "dist/main.js",
   "license": "MIT",
   "scripts": {
-    "start": "electron ."
+    "start": "electron ./dist/main.js",
+    "build": "tsc",
+    "watch": "tsc -w"
   },
   "dependencies": {
-    "electron": "^10.1.2"
+    "electron": "^19.0.5"
   },
   "devDependencies": {
-    "eslint": "^7.9.0",
-    "eslint-config-scwood": "^1.2.0"
+    "@typescript-eslint/eslint-plugin": "^5.29.0",
+    "@typescript-eslint/parser": "^5.29.0",
+    "eslint": "^8.18.0",
+    "prettier": "^2.7.1",
+    "typescript": "^4.7.4"
   }
 }
