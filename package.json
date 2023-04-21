@@ -9,7 +9,7 @@
     "watch": "tsc -w"
   },
   "dependencies": {
-    "electron": "^19.0.5"
+    "electron": "^24.1.2"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.29.0",
